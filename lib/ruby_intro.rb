@@ -17,23 +17,21 @@ def sum_to_n? arr, n
         return false
     elsif arr.length == 1
         return false
-    elsif
-        arr(1) + arr(2)
     end
-    # arr.each_with_index do |x, index|
-    # arr.drop(index).each_with_index do |y, index2|
-    # if (x + y) == n and index != index2+index
-    #     return true
-    #     end
-    # end
-    # end
-    # return false
+    arr.each_with_index do |x, index|
+        arr.drop(index).each_with_index do |y, index2|
+            if (x + y) == n and index != index2 + index
+                return true
+            end
+        end
+    end
+    return false
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+    return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
