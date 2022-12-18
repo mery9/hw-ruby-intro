@@ -3,15 +3,31 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+    arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+    a = arr.max(2){ |a, b| a<=>b }
+    a = a.sum
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+    
+    if arr.length == 0
+        return false
+    elsif arr.length == 1
+        return false
+    elsif
+        arr(1) + arr(2)
+    end
+    # arr.each_with_index do |x, index|
+    # arr.drop(index).each_with_index do |y, index2|
+    # if (x + y) == n and index != index2+index
+    #     return true
+    #     end
+    # end
+    # end
+    # return false
 end
 
 # Part 2
