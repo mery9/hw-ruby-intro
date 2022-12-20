@@ -49,8 +49,8 @@ class BookInStock
     attr_writer :isbn
     attr_writer :price
     def initialize (isbn, price)
-        raise ArgumentError if isbn = ""
-        raise ArgumentError if price <= 0
+        # raise ArgumentError if isbn = ""
+        # raise ArgumentError if price <= 0
         @isbn = isbn
         @price = price
     end
@@ -64,7 +64,8 @@ class BookInStock
     end
 
     def price_as_string
-        
+        changePriceToStr = "%.2f" % @price.to_s
+        return "$#{changePriceToStr}"
     end
 
 end
