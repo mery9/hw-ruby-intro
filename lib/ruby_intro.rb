@@ -49,8 +49,10 @@ class BookInStock
     attr_writer :isbn
     attr_writer :price
     def initialize (isbn, price)
-        # raise ArgumentError if isbn = ""
+        # raise ArgumentError if isbn = "" || isbn.kind_of?(String)
         # raise ArgumentError if price <= 0
+        raise ArgumentError if price <= 0
+        raise ArgumentError if isbn.length <= 0
         @isbn = isbn
         @price = price
     end
