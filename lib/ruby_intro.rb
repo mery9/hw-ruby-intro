@@ -65,3 +65,28 @@ class BookInStock
     end
 end
 
+# class BookInStock
+#     def initialize (isbn, price)
+#         raise ArgumentError if price <= 0 || isbn.length <= 0
+#         @isbn, @price = isbn, price
+#     end
+
+#     def isbn=isbn
+#         @isbn = isbn
+#     end
+#     def isbn
+#         @isbn
+#     end
+
+#     def price=price
+#         @price = price
+#     end
+#     def price
+#         @price
+#     end
+    
+#     def price_as_string
+#         changePriceToStr = "%.2f" % @price.to_s
+#         return "$#{changePriceToStr}"
+#     end
+# end
